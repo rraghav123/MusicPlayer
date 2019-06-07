@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "../../styles/album-songs.scss";
 import { ALBUM_SONGS } from "../../Enum";
 
-const AlbumSongs = ({ data, selectedAlbum, fetchSong, setPlayAll }) => {
+const AlbumSongs = ({ data, selectedAlbum, fetchSong, setPlayAll, selectedSong }) => {
   useEffect(() => {
     setPlayAll(false);
   }, [selectedAlbum]);
@@ -51,7 +51,13 @@ const AlbumSongs = ({ data, selectedAlbum, fetchSong, setPlayAll }) => {
         <div className={styles.songsList}>
           <div>
             {data.items.map(song => (
-              <div className={styles.song} key={song.id} onClick={handleFetchSong(song)}>
+              <div
+                className={song.id === selectedSong.id ?
+                  "album-songs__list__item album-songs__list__item--selected" :
+                  "album-songs__list__item"}
+                key={song.id}
+                onClick={handleFetchSong(song)}
+              >
                 <span className={styles.songName}>{song.name}</span>
                 <span className={styles.songDuration}>{getDuration(song.duration_ms)}</span>
               </div>
@@ -69,6 +75,7 @@ const AlbumSongs = ({ data, selectedAlbum, fetchSong, setPlayAll }) => {
 AlbumSongs.propTypes = {
   data: PropTypes.object.isRequired,
   selectedAlbum: PropTypes.object.isRequired,
+  selectedSong: PropTypes.object.isRequired,
 
   setPlayAll: PropTypes.func.isRequired,
   fetchSong: PropTypes.func.isRequired

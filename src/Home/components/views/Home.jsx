@@ -102,6 +102,7 @@ const Home = ({
                 albumSongs={home.albumSongs}
                 fetchSong={fetchSong}
                 setPlayAll={setPlayAll}
+                selectedSong={home.selectedSong}
               /> :
               <HomeScreen
                 data={home.newRelease}
@@ -135,7 +136,7 @@ Home.propTypes = {
   setPlayAll: PropTypes.func.isRequired,
   playNext: PropTypes.func.isRequired,
   playPrev: PropTypes.func.isRequired,
-  setArtistList: PropTypes.object.isRequired,
+  setArtistList: PropTypes.func.isRequired,
   fetchNewReleases: PropTypes.func.isRequired
 };
 

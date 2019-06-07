@@ -50,6 +50,9 @@
       margin: 0.5rem 0;
       cursor: pointer;
       color: #fff;
+      &--selected {
+        background-color: $home-secondary-color;
+      }
       &--name {
 
       }

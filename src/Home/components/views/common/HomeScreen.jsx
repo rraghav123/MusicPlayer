@@ -17,10 +17,12 @@ const HomeScreen = ({ data }) => {
       <div className="home-screen__picks--list">
         {
           data.albums.items.map(cover => (
-            <div
-              className="home-screen__cover--art"
-              style={{ backgroundImage: `url(${cover.images[0].url})` }}
-            />
+            <a href={cover.external_urls.spotify} target="blank" key={cover.id}>
+              <div
+                className="home-screen__cover--art"
+                style={{ backgroundImage: `url(${cover.images[0].url})` }}
+              />
+            </a>
           ))
         }
       </div>

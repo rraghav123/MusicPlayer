@@ -7,6 +7,11 @@
     position: relative;
     margin: 1rem 1rem 1rem 0;
     cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(0px);
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
   &__cover {
     background-size: contain;

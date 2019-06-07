@@ -14,7 +14,8 @@ const ArtistAlbums = ({
   selectedAlbum,
   albumSongs,
   fetchSong,
-  setPlayAll
+  setPlayAll,
+  selectedSong
 }) => {
   const styles = {
     container: "artist-album__container",
@@ -79,6 +80,7 @@ const ArtistAlbums = ({
                   selectedAlbum={selectedAlbum}
                   fetchSong={fetchSong}
                   setPlayAll={setPlayAll}
+                  selectedSong={selectedSong}
                 />
               </div>
             }
@@ -95,6 +97,7 @@ ArtistAlbums.propTypes = {
   albums: PropTypes.object.isRequired,
   selectedAlbum: PropTypes.object.isRequired,
   albumSongs: PropTypes.object.isRequired,
+  selectedSong: PropTypes.object.isRequired,
 
   fetchSong: PropTypes.func.isRequired,
   fetchAlbumSongs: PropTypes.func.isRequired,
