@@ -1,0 +1,61 @@
+@import "../../../abstracts/variables";
+.album-songs {
+  &__container {
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    & > div:first-child {
+      flex: 0.7
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__album--name {
+      font-size: 2rem;
+      cursor: default;
+    }
+    &__album--songs-count {
+      font-size: 1.4rem;
+      color: $grey;
+      cursor: default;
+    }
+    &__play--all {
+      font-size: 1.4rem;
+      color: $primary-color;
+      cursor: pointer;
+      flex: 0.3;
+      text-align: right;
+    }
+  }
+  &__list {
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+    & > div:first-child {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: scroll;
+    }
+    &__item {
+      display: flex;
+      padding: 1rem;
+      justify-content: space-between;
+      background-color: #6D4DA9;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      color: #fff;
+      &--name {
+
+      }
+      &--duration {
+
+      }
+    }
+  }
+}

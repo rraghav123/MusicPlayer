@@ -1,0 +1,80 @@
+@import "../../../abstracts/variables";
+
+.artist-album {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__cover {
+    height: 23rem;
+    position: relative;
+    &--image {
+      height: 100%;
+      background-size: cover;
+      background-position-y: 10%;
+      filter: brightness(0.5);
+    }
+
+    &--details {
+      position: absolute;
+      top: 5rem;
+      left: 5rem;
+      & > div:first-child {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      & > div:nth-child(2) {
+        color: $white;
+        font-size: 3rem;
+        font-weight: 800;
+      }
+    }
+  }
+  &__list {
+    &__container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 1rem;
+    }
+    &__content {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+    }
+    &__header {
+      font-size: 3rem;
+      font-weight: 800;
+      color: $grey;
+      transition: all 0.2s;
+    }
+    &__albums {
+      overflow: hidden;
+      position: relative;
+      & > div:first-child {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        overflow: scroll;
+      }
+      &--album {
+        &__card {
+
+        }
+      }
+      &--songs {
+        transform-origin: right;
+        margin: 0 1rem 1rem 1rem;
+        flex: 0.3;
+        background-color: $white;
+        transition: all 0.2s;
+        opacity: 1;
+        min-width: 30rem;
+      }
+    }
+  }
+}

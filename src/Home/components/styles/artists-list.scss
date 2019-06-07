@@ -1,0 +1,36 @@
+@import "../../../abstracts/variables";
+
+.artist__card {
+  background-color: $white;
+  margin: 1rem;
+  display: flex;
+  cursor: pointer;
+  &__image {
+    height: 100%;
+    width: 8rem;
+    background-size: cover;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+  }
+  &__name {
+    color: $home-secondary-color;
+    font-size: 1.4rem;
+  }
+  &__popularity {
+    color: $grey;
+  }
+  &__genres {
+    color: $grey;
+  }
+  &__followers {
+    color: $grey;
+    &-count {
+      color: $home-secondary-color;
+    }
+  }
+  &__no-result-found {
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: $home-secondary-color;
+  }
+}

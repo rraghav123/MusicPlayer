@@ -1,0 +1,39 @@
+@import "../../../abstracts/variables";
+
+.album-card {
+  &__container {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    margin: 1rem 1rem 1rem 0;
+    cursor: pointer;
+  }
+  &__cover {
+    background-size: contain;
+    height: 100%;
+  }
+  &__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+    opacity: 0.8;
+    color: $white;
+    padding: 0.5rem;
+  }
+  &__artist {
+    &--name {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    &--album {
+
+    }
+    &--songs-count {
+
+    }
+  }
+}
